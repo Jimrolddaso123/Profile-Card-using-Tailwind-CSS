@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Profile Card</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a modern look */
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        /* Define specific colors for social buttons */
+        .twitter-hover:hover {
+            background-color: #1DA1F2; /* Twitter Blue */
+            color: white;
+        }
+        .linkedin-hover:hover {
+            background-color: #0A66C2; /* LinkedIn Blue */
+            color: white;
+        }
+        .github-hover:hover {
+            background-color: #171515; /* GitHub Black */
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+
+    <!-- Profile Card Container -->
+    <!-- Responsive Widths: max-w-sm (mobile), md:max-w-md (tablet), lg:max-w-lg (desktop) -->
+    <div class="w-full max-w-sm md:max-w-md lg:max-w-lg bg-white rounded-2xl shadow-xl overflow-hidden transform hover:shadow-2xl transition duration-500">
+        
+        <!-- Header/Background Section -->
+        <div class="h-32 bg-gradient-to-r from-indigo-500 to-purple-600"></div>
+
+        <!-- Profile Content Section -->
+        <div class="p-6 text-center -mt-16">
+            
+            <!-- Circular Profile Image: Using the public URL provided by the user and fixing the HTML structure -->
+            <img 
+                src="https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/493413742_9531687053594488_8043285455746918278_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFWE8h7o2F2Au20BAYgAgHp_0CQuYz-z5r_QJC5jP7PmqxFoW7iN0M5X3sNjyJuXjE_iJEUx44TVxZkxzbbkAzO&_nc_ohc=YzeL-u3NjHQQ7kNvwHF5G5A&_nc_oc=AdlDnWh-bZkvOP0DVKXdLx-U5CVq0Zgnnq1y3-ATaF37sU881O80Gb9aJeVudUhR_by8VN3IyQTkoIaYWooHEpYh&_nc_zt=23&_nc_ht=scontent.fdvo2-1.fna&_nc_gid=N3XclKzaAOy4mtXGwkNC-A&oh=00_Afesx9Y4jPdi5JuWUbQ-S0CCcKzTzIe2nffZzmYofco2Jw&oe=68FD3784"
+                class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white shadow-2xl transition duration-300 transform hover:scale-105" 
+                alt="Jimrold Daso Profile Image"
+            >
+
+            <!-- Name and Bio Text -->
+            <h1 class="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl lg:text-4xl">
+             Jimrold Daso
+            </h1>
+            
+            <p class="mt-2 text-base text-gray-500 max-w-xs mx-auto md:text-lg">
+                Playing Online Games Playing Basketball
+            </p>
+
+            <!-- Social Media Buttons -->
+            <div class="mt-8 flex justify-center space-x-3 md:space-x-5">
+                
+                <!-- Twitter Button -->
+                <a 
+                    href="#" 
+                    class="twitter-hover inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 
+                           transition duration-300 ease-in-out shadow-md"
+                    aria-label="Twitter Profile"
+                >
+                    <!-- Twitter Icon (SVG) -->
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M22.254 5.253c-.768.342-1.597.575-2.478.683.882-.53 1.558-1.373 1.879-2.378-.823.487-1.743.839-2.721 1.026-.778-.831-1.888-1.353-3.123-1.353-2.366 0-4.283 1.917-4.283 4.283 0 .335.038.66.112.973-3.56-1.785-6.716-3.765-8.83-6.524-.37.636-.58 1.378-.58 2.164 0 1.488.757 2.802 1.907 3.568-.703-.021-1.362-.216-1.935-.53v.055c0 2.074 1.476 3.805 3.425 4.195-.36.098-.74.15-1.13.15-.275 0-.543-.027-.803-.075.545 1.706 2.12 2.946 3.993 2.98l-1.516.115-1.076.012c0 2.457 1.258 4.633 3.167 5.922 1.91 1.288 4.22 1.996 6.55 1.996 7.85 0 12.13-6.5 12.13-12.13 0-.185-.004-.37-.013-.553.83-.598 1.55-1.34 2.122-2.185-.768.342-1.597.575-2.478.683.882-.53 1.558-1.373 1.879-2.378-.823.487-1.743.839-2.721 1.026z"/></svg>
+                </a>
+                
+                <!-- LinkedIn Button -->
+                <a 
+                    href="#" 
+                    class="linkedin-hover inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 
+                           transition duration-300 ease-in-out shadow-md"
+                    aria-label="LinkedIn Profile"
+                >
+                    <!-- LinkedIn Icon (SVG) -->
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM4 9H0v12h4zM2 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+                </a>
+
+                <!-- GitHub Button -->
+                <a 
+                    href="#" 
+                    class="github-hover inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-600 
+                           transition duration-300 ease-in-out shadow-md"
+                    aria-label="GitHub Profile"
+                >
+                    <!-- GitHub Icon (SVG) -->
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.11.819-.26.819-.575v-2.285c-3.338.73-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.086 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.775.419-1.305.762-1.603-2.665-.302-5.466-1.332-5.466-5.93 0-1.31.467-2.385 1.235-3.224-.125-.303-.535-1.52.117-3.176 0 0 1.006-.322 3.303 1.232.956-.266 1.979-.399 3.006-.399 1.027 0 2.05.133 3.008.399 2.296-1.554 3.3-1.232 3.3-1.232.653 1.656.243 2.873.118 3.176.77.839 1.233 1.914 1.233 3.224 0 4.61-2.805 5.626-5.474 5.922.43.37.817 1.107.817 2.238v3.313c0 .314.22.68.823.573C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+            </div>
+
+            <!-- Footer/Action Section (optional) -->
+            <div class="mt-8 pt-4 border-t border-gray-100 flex justify-between items-center text-sm">
+                <span class="text-indigo-600 font-semibold">4.8K Followers</span>
+                <button class="px-4 py-2 bg-indigo-500 text-white font-semibold rounded-full shadow-md hover:bg-indigo-600 transition duration-300">
+                    Connect
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
